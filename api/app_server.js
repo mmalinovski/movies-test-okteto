@@ -30,22 +30,22 @@ const app = express();
 // enable this if you run behind a proxy (e.g. nginx)
 app.set('trust proxy', 1);
 
-const RedisStore = connectRedis(session);
+// const RedisStore = connectRedis(session);
 
 //Configure redis client
-const redisClient = redis.createClient({
-    host: 'localhost',
-    port: 6379
-});
-
-redisClient.on('error', function (err) {
-    if (process.env.NODE_ENV !== 'production') {
-        console.log('Could not establish a connection with redis. ' + err);
-    }
-});
-redisClient.on('connect', function (err) {
-    console.log('Connected to redis successfully');
-});
+// const redisClient = redis.createClient({
+//     host: 'localhost',
+//     port: 6379
+// });
+//
+// redisClient.on('error', function (err) {
+//     if (process.env.NODE_ENV !== 'production') {
+//         console.log('Could not establish a connection with redis. ' + err);
+//     }
+// });
+// redisClient.on('connect', function (err) {
+//     console.log('Connected to redis successfully');
+// });
 
 
 const users = require('./routes/users');
