@@ -70,6 +70,7 @@ class App extends Component {
     const { movies, watching, session } = this.state;
     return (
       <div className="App">
+        <h2>MY APP</h2>
         <header className={`Header ${this.state.fixHeader ? 'fixed' : ''}`}>
           <div className="content">
             <div className="logo">Movies</div>
