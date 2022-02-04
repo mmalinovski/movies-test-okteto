@@ -9,5 +9,5 @@ COPY . .
 RUN --mount=type=cache,target=./node_modules/.cache/webpack npm run build
 
 FROM nginx:alpine
-COPY --from=dev /usr/src/app/public /usr/share/nginx/html
+COPY --from=dev /usr/src/app/build /usr/share/nginx/html
 EXPOSE 80
