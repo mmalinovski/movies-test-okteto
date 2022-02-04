@@ -22,8 +22,8 @@ spec:
         - name: load-data
           image: {{ .Values.api.image }}:{{ .Values.tag }}
           command:
-            - yarn
-            - load
+            - npm
+            - start
           env:
             - name: MONGODB_PASSWORD
               valueFrom:
