@@ -9,4 +9,4 @@ COPY package.json yarn.lock ./
 RUN --mount=type=cache,target=/root/.npm NPM_CACHE_FOLDER=/root/.npm npm install
 
 COPY . .
-CMD ["yarn", "start"]
+CMD ["npm", "start"]
